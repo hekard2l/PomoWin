@@ -1,6 +1,6 @@
 # PomoWin
 
-![Screenshot]()
+![Screenshot](./screenshot.png)
 
 25 minute timer for focusing on your work.
 
