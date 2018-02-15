@@ -10,10 +10,13 @@ namespace PomoWin {
 
 	public partial class MainForm : Form {
 		private readonly Timer countdown;
+		private readonly Timer hoursCountdown;
 		private int remainingMinutes = 0;
 		// Move form dependencies
 		public const int WM_NCLBUTTONDOWN = 0xA1;
 		public const int HT_CAPTION = 0x2;
+
+		public const double REMAINING_YEARS = 3.5;
 
 		[DllImportAttribute( "user32.dll" )]
 		public static extern int SendMessage( IntPtr hWnd, int Msg, int wParam, int lParam );
@@ -30,13 +33,26 @@ namespace PomoWin {
 
 			countdown = new Timer { Interval = 10 };
 			countdown.Tick += new EventHandler( CountdownTick );
+
+			hoursCountdown = new Timer { Interval = 3600000 };
+			hoursCountdown.Tick += HoursCountdownTick;
+		}
+
+		private void HoursCountdownTick( object sender, EventArgs e ) {
+			UpdateHoursCountdown();
+		}
+
+		private void UpdateHoursCountdown() {
+			var future = DateTime.Parse("Jan 1, 2022");
+			var now = DateTime.Now;
+			var hours = future.Subtract( now ).TotalHours * 0.66;
+			this.lblHoursLeft.Text = hours.ToString("F02");
 		}
 
 		void CountdownTick( object sender, EventArgs e ) {
 			if( --remainingMinutes <= 0 ) {
 				countdown.Stop();
 				btnStopCountdown.FlatAppearance.BorderColor = Color.Gray;
-				MessageBox.Show( "Countdown complete" );
 			}
 			UpdateTimerDisplay();
 		}
@@ -96,6 +112,10 @@ namespace PomoWin {
 			countdown.Interval = (int)TimeSpan.FromMinutes( 1.0 ).TotalMilliseconds;
 			countdown.Start();
 			UpdateTimerDisplay();
+		}
+
+		private void MainForm_Load( object sender, EventArgs e ) {
+			UpdateHoursCountdown();
 		}
 	}
 }

@@ -42,6 +42,7 @@
 			this.btnShortBreak = new System.Windows.Forms.Button();
 			this.btnLongBreak = new System.Windows.Forms.Button();
 			this.lbTitle = new System.Windows.Forms.Label();
+			this.lblHoursLeft = new System.Windows.Forms.Label();
 			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -73,10 +74,10 @@
 			this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
 			this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
 			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnClose.Location = new System.Drawing.Point(280, -1);
-			this.btnClose.Margin = new System.Windows.Forms.Padding(0, 0, 0, 12);
+			this.btnClose.Location = new System.Drawing.Point(210, -1);
+			this.btnClose.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.btnClose.Name = "btnClose";
-			this.btnClose.Size = new System.Drawing.Size(48, 31);
+			this.btnClose.Size = new System.Drawing.Size(36, 25);
 			this.btnClose.TabIndex = 6;
 			this.tooltip.SetToolTip(this.btnClose, global::PomoWin.Properties.Resources.CloseText);
 			this.btnClose.UseVisualStyleBackColor = false;
@@ -92,10 +93,10 @@
 			this.btnStopCountdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStopCountdown.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnStopCountdown.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnStopCountdown.Location = new System.Drawing.Point(13, 49);
-			this.btnStopCountdown.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.btnStopCountdown.Location = new System.Drawing.Point(10, 40);
+			this.btnStopCountdown.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnStopCountdown.Name = "btnStopCountdown";
-			this.btnStopCountdown.Size = new System.Drawing.Size(107, 98);
+			this.btnStopCountdown.Size = new System.Drawing.Size(80, 80);
 			this.btnStopCountdown.TabIndex = 4;
 			this.btnStopCountdown.TabStop = false;
 			this.btnStopCountdown.Text = "-";
@@ -115,10 +116,10 @@
 			this.chkPin.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.MenuHighlight;
 			this.chkPin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.chkPin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.chkPin.Location = new System.Drawing.Point(280, 106);
-			this.chkPin.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.chkPin.Location = new System.Drawing.Point(210, 86);
+			this.chkPin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.chkPin.Name = "chkPin";
-			this.chkPin.Size = new System.Drawing.Size(48, 44);
+			this.chkPin.Size = new System.Drawing.Size(36, 36);
 			this.chkPin.TabIndex = 5;
 			this.tooltip.SetToolTip(this.chkPin, global::PomoWin.Properties.Resources.OnTop);
 			this.chkPin.UseVisualStyleBackColor = false;
@@ -133,10 +134,10 @@
 			this.btnStartTask.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btnStartTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnStartTask.Image = global::PomoWin.Properties.Resources.start1;
-			this.btnStartTask.Location = new System.Drawing.Point(280, 49);
-			this.btnStartTask.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.btnStartTask.Location = new System.Drawing.Point(210, 40);
+			this.btnStartTask.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnStartTask.Name = "btnStartTask";
-			this.btnStartTask.Size = new System.Drawing.Size(48, 44);
+			this.btnStartTask.Size = new System.Drawing.Size(36, 36);
 			this.btnStartTask.TabIndex = 1;
 			this.tooltip.SetToolTip(this.btnStartTask, global::PomoWin.Properties.Resources.StartText);
 			this.btnStartTask.UseVisualStyleBackColor = false;
@@ -151,10 +152,10 @@
 			this.btnShortBreak.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btnShortBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnShortBreak.Image = global::PomoWin.Properties.Resources.short_break;
-			this.btnShortBreak.Location = new System.Drawing.Point(218, 49);
-			this.btnShortBreak.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.btnShortBreak.Location = new System.Drawing.Point(164, 40);
+			this.btnShortBreak.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnShortBreak.Name = "btnShortBreak";
-			this.btnShortBreak.Size = new System.Drawing.Size(48, 44);
+			this.btnShortBreak.Size = new System.Drawing.Size(36, 36);
 			this.btnShortBreak.TabIndex = 2;
 			this.tooltip.SetToolTip(this.btnShortBreak, global::PomoWin.Properties.Resources.StartText);
 			this.btnShortBreak.UseVisualStyleBackColor = false;
@@ -169,10 +170,10 @@
 			this.btnLongBreak.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.btnLongBreak.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnLongBreak.Image = global::PomoWin.Properties.Resources.long_break;
-			this.btnLongBreak.Location = new System.Drawing.Point(218, 106);
-			this.btnLongBreak.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.btnLongBreak.Location = new System.Drawing.Point(164, 86);
+			this.btnLongBreak.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.btnLongBreak.Name = "btnLongBreak";
-			this.btnLongBreak.Size = new System.Drawing.Size(48, 44);
+			this.btnLongBreak.Size = new System.Drawing.Size(36, 36);
 			this.btnLongBreak.TabIndex = 3;
 			this.tooltip.SetToolTip(this.btnLongBreak, global::PomoWin.Properties.Resources.StartText);
 			this.btnLongBreak.UseVisualStyleBackColor = false;
@@ -184,22 +185,34 @@
 			this.lbTitle.BackColor = System.Drawing.Color.Transparent;
 			this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lbTitle.ForeColor = System.Drawing.Color.White;
-			this.lbTitle.Location = new System.Drawing.Point(7, 7);
-			this.lbTitle.Margin = new System.Windows.Forms.Padding(7, 0, 0, 12);
+			this.lbTitle.Location = new System.Drawing.Point(5, 6);
+			this.lbTitle.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
 			this.lbTitle.Name = "lbTitle";
 			this.lbTitle.Size = new System.Drawing.Size(78, 21);
 			this.lbTitle.TabIndex = 9;
 			this.lbTitle.Text = "PomoWin";
 			this.lbTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
 			// 
+			// lblHoursLeft
+			// 
+			this.lblHoursLeft.AutoSize = true;
+			this.lblHoursLeft.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblHoursLeft.ForeColor = System.Drawing.Color.White;
+			this.lblHoursLeft.Location = new System.Drawing.Point(7, 127);
+			this.lblHoursLeft.Name = "lblHoursLeft";
+			this.lblHoursLeft.Size = new System.Drawing.Size(31, 15);
+			this.lblHoursLeft.TabIndex = 10;
+			this.lblHoursLeft.Text = "1024";
+			// 
 			// MainForm
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-			this.ClientSize = new System.Drawing.Size(340, 161);
+			this.ClientSize = new System.Drawing.Size(255, 155);
+			this.Controls.Add(this.lblHoursLeft);
 			this.Controls.Add(this.btnLongBreak);
 			this.Controls.Add(this.btnShortBreak);
 			this.Controls.Add(this.lbTitle);
@@ -208,12 +221,12 @@
 			this.Controls.Add(this.chkPin);
 			this.Controls.Add(this.btnStartTask);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "MainForm";
-			this.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
+			this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Color Picker";
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
 			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
@@ -234,6 +247,7 @@
         private System.Windows.Forms.ToolStripMenuItem contextByte;
 		private System.Windows.Forms.Button btnShortBreak;
 		private System.Windows.Forms.Button btnLongBreak;
+		private System.Windows.Forms.Label lblHoursLeft;
 	}
 }
 
